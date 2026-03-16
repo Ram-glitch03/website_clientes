@@ -64,7 +64,7 @@ const Navbar = ({ activePage, setActivePage }: { activePage: string, setActivePa
           <img
             src="/logo-medla-oficial.png"
             alt="Medla Asesores Logo"
-            className="h-16 w-auto object-contain logo-black"
+            className="h-16 w-auto object-contain"
           />
         </div>
 
@@ -142,7 +142,7 @@ const Footer = ({ setActivePage }: { setActivePage: (p: string) => void }) => {
             <img
               src="/logo-medla-oficial.png"
               alt="Medla Asesores Logo"
-              className="h-20 w-auto object-contain drop-shadow-lg logo-black"
+              className="h-20 w-auto object-contain drop-shadow-lg"
             />
           </div>
           <p className="text-brand-muted max-w-md mb-8">
@@ -205,8 +205,8 @@ const PricingSection = ({ setActivePage }: { setActivePage: (p: string) => void 
               transition={{ delay: idx * 0.1 }}
               viewport={{ once: true }}
               className={`p-10 border flex flex-col h-full relative transition-all duration-500 ${pkg.highlight
-                  ? 'border-brand-accent bg-brand-primary text-white shadow-2xl scale-105 z-10'
-                  : 'border-brand-primary/5 bg-brand-bg text-brand-primary'
+                ? 'border-brand-accent bg-brand-primary text-white shadow-2xl scale-105 z-10'
+                : 'border-brand-primary/5 bg-brand-bg text-brand-primary'
                 }`}
             >
               {pkg.highlight && (
@@ -233,8 +233,8 @@ const PricingSection = ({ setActivePage }: { setActivePage: (p: string) => void 
               <button
                 onClick={() => setActivePage('action')}
                 className={`w-full py-5 font-bold uppercase tracking-widest text-xs transition-all duration-300 ${pkg.highlight
-                    ? 'bg-brand-accent text-white hover:bg-white hover:text-brand-primary'
-                    : 'bg-brand-primary text-white hover:bg-brand-accent shadow-sm'
+                  ? 'bg-brand-accent text-white hover:bg-white hover:text-brand-primary'
+                  : 'bg-brand-primary text-white hover:bg-brand-accent shadow-sm'
                   }`}
               >
                 {pkg.cta}
