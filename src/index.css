@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-brand-primary: #1A1A1A;
+  --color-brand-accent: #C5A37E;
+  --color-brand-accent-hover: #B4926D;
+  --color-brand-bg: #F9F8F6;
+  --color-brand-muted: #8E8E8E;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-primary font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+.glass-nav {
+  @apply sticky top-0 z-50 bg-brand-bg/80 backdrop-blur-md border-b border-brand-primary/5;
+}
+
+.btn-primary {
+  @apply px-8 py-4 bg-brand-accent text-white font-medium transition-all duration-300 hover:bg-brand-accent-hover hover:shadow-lg active:scale-95 disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply px-8 py-4 border border-brand-primary text-brand-primary font-medium transition-all duration-300 hover:bg-brand-primary hover:text-white active:scale-95;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
+
+.logo-black {
+  filter: brightness(0);
+}
+
